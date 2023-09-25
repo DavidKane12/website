@@ -17,6 +17,7 @@ body {
 
 html{
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 section {
     display: grid;
@@ -44,7 +45,7 @@ position: fixed;
     left: 0;
     width: 100%;
     /*padding: 20px 100px;*/
-    padding-left: 80px;
+    padding-left: 4vw;
     padding-top: 10px;
     display: flex;
     justify-content: space-between;
@@ -78,6 +79,9 @@ position: fixed;
 
 .navbar{
     width: 600px;
+    padding-left: 30px;
+    padding-right: 10px;
+    text-align: center;
 }
 /* Main content */
 .main {
@@ -109,10 +113,10 @@ body::-webkit-scrollbar {
 }
 
 .swiper {
-    width: 600px;
-    height: 400px;
+    width: 533px;
+    height: 300px;
     max-width: 80vw;
-    max-height: 50vw;
+    max-height: 45vw;
 }
 
 #pdf{
@@ -121,19 +125,21 @@ body::-webkit-scrollbar {
     height: 500px;
 }
 
+.mob{
+display: none;
+}
+
 @media (max-width: 800px) {
 
     p {
         font-size: 14px;
     }
-
-    section {
-        scroll-snap-align: start;
-        max-height: 100vh;
-    }
-
     #pdf{
         max-width: 80vw;
         height: 500px;
+    }
+
+    .mob{
+        display: inline;
     }
 }
